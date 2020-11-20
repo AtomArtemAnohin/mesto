@@ -1,0 +1,9 @@
+.element-name {
+ background-color: white;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 282px;
+ height: 79px;
+ border-radius: 0px 0px 10px 10px;
+}

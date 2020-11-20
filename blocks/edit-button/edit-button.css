@@ -3,5 +3,11 @@
     box-sizing: border-box;
     width: 24px;
     height: 24px;
-    margin: 37px 0px 0px 18px;
+    margin-left: 18px;
 }
+@media (max-width: 320px) {
+    .edit-button {
+        width: 17px;
+        height: 17px;
+    }
+    }

@@ -1,4 +1,11 @@
 .edit-user {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
+@media (max-width: 320px) {
+    .edit-user
+     {
+       margin-top: 22.5px;
+    }
+    }

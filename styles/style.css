@@ -14,3 +14,11 @@
 @import url(../blocks/edit-button/__pen/edit-button__pen.css);
 @import url(../blocks/add-button/add-button.css);
 @import url(../blocks/add-button/__pluc/add-button__pluc.css);
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/element/element.css);
+@import url(../blocks/element-name/element-name.css);
+@import url(../blocks/element-text/element-text.css);
+@import url(../blocks/button-like/button-like.css);
+@import url(../blocks/element-img/element-img.css);
+@import url(../blocks/element/_margin-non/element_margin-non.css);
+@import url(../blocks/footer/footer.css);

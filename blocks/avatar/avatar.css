@@ -1,4 +1,13 @@
 .avatar {
     width: 168.75px;
     height: 127.5px;
+   
 }
+@media (max-width: 320px) {
+    .avatar {
+        margin-bottom: 0px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    }
