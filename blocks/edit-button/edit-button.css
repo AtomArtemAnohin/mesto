@@ -4,6 +4,11 @@
     width: 24px;
     height: 24px;
     margin-left: 18px;
+    background-image: url(/images/pen.png);
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
+
 }
 @media (max-width: 320px) {
     .edit-button {
