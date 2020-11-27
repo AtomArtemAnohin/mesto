@@ -23,63 +23,49 @@
                 </div>
                 <p class="user-data">Исследователь океана</p>
             </div>
-            <div class="add-button">
-                <img class="add-button__pluc" src="/images/Vector-pluc.png" alt="нарисованный плюсик">
-            </div>
+            <button class="add-button"> </button>
         </div>
         <div class="elements">
             <div class="element">
                     <img class="element-img" src="/images/pictures-1.png" alt="фото">
                 <div class="element-name">
                     <div class="element-text">Карачаевск</div>
-                    <div class="button-like">
-                        <img src="/images/Vector-like.png" alt="">
-                    </div>
+                    <button class="button-like"></button>
                 </div>
             </div>
             <div class="element">
                 <img class="element-img" src="/images/pictures-2.png" alt="фото">
                 <div class="element-name">
                     <div class="element-text">Гора Эльбрус</div>
-                    <div class="button-like">
-                        <img src="/images/Vector-like.png" alt="">
-                    </div>
+                    <button class="button-like"></button>
                 </div>
             </div> 
             <div class="element element_margin-non">
                 <img class="element-img" src="/images/pictures-3.png" alt="фото">
                 <div class="element-name">
                     <div class="element-text">Домбай</div>
-                    <div class="button-like">
-                        <img src="/images/Vector-like.png" alt="">
-                    </div>
+                    <button class="button-like"></button>
                 </div>
             </div>
             <div class="element">
                 <img class="element-img" src="/images/pictures-4.png" alt="фото">
                 <div class="element-name">
                     <div class="element-text">Гора Эльбрус</div>
-                    <div class="button-like">
-                        <img src="/images/Vector-like.png" alt="">
-                    </div>
+                    <button class="button-like"></button>
                 </div>
             </div>
             <div class="element">
                 <img class="element-img" src="/images/pictures-5.png" alt="фото">
                 <div class="element-name">
                     <div class="element-text">Домбай</div>
-                    <div class="button-like">
-                        <img src="/images/Vector-like.png" alt="">
-                    </div>
+                    <button class="button-like"></button>
                 </div>
             </div>
             <div class="element element_margin-non">
                 <img class="element-img" src="/images/pictures-6.png" alt="фото">
                 <div class="element-name">
                     <div class="element-text">Карачаево-Ч...</div>
-                    <div class="button-like">
-                        <img src="/images/Vector-like.png" alt="">
-                    </div>
+                    <button class="button-like"></button>
                 </div>
             </div>    
         </div>
@@ -90,9 +76,11 @@
     <div class="popup">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input type="text" class="popup__input popup__input_field_name">
-            <input type="text" class="popup__input">
-            <button class="popup__button" type="button">Сохранить</button>
+            <form class="popup__form">
+                <input name="name" type="text" class="popup__input popup__input_name">
+                <input name="job" type="text" class="popup__input popup__input_job">
+                <button class="popup__button" type="submit">Сохранить</button>
+            </form>
             <button class="popup__close" target="_self" type="button"></button>
         </div>
     </div>

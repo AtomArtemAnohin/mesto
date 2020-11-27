@@ -5,7 +5,13 @@
     min-width: 150px;
     min-height: 50px;
     margin: 35px 0px 35px 0px;
-    text-align: center;
+    background-image: url(/images/Vector-pluc.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.add-button:hover {
+    opacity: 0.6;
 }
 @media (max-width: 320px) {
     .add-button {

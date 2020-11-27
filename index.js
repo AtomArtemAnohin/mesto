@@ -1,15 +1,24 @@
 const editButtonNode = document.querySelector('.edit-button');
 const popupNode = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
+const leadSubtitleNode = document.querySelector('.user-date');
+const leadTitleNode = document.querySelector('.user-name');
+const formNode = document.querySelector('.popup__form');
+const formInputNameNode = document.querySelector('.popup__input_name');
+const formInputJobNode = document.querySelector('.popup__input_job');
+const formButtonNode = document.querySelector('.popup__button');
 
-editButtonNode.addEventListener('click', handleEditButtonClick);
-popupClose.addEventListener('click', handlepopupClose);
+editButtonNode.addEventListener('click', togleleEditButtonClick);
+popupClose.addEventListener('click', togleleEditButtonClick);
 
-function handleEditButtonClick() {
-    popupNode.classList.add('popup__visible');
+function togleleEditButtonClick() {
+    popupNode.classList.toggle('popup__visible');
 }
-function handlepopupClose() {
-    popupNode.classList.remove('popup__visible');
 
+formNode.addEventListener('submit', handkeFormSubmit);
+
+function handkeFormSubmit(event) {
+    event.preventDefault();
+    leadTitleNode.textContent = formInputNameNode.value;
+    leadSubtitleNode.textContent = formInputJobNode.value;
 }
-

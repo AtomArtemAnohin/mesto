@@ -11,3 +11,14 @@
     margin-right: -77px;
     margin-top: -70px;
 }
+.popup__close:hover {
+    opacity: 0.6;
+}
+@media (max-width: 320px) {
+    .popup__close {
+        width: 26px;
+        height: 26px;
+        margin-right: -30px;
+        margin-top: -80px;
+    }
+    }
