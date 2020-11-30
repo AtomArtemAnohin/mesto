@@ -1,10 +1,9 @@
-.avatar {
+.profile__avatar {
     width: 168.75px;
     height: 127.5px;
-   
 }
 @media (max-width: 320px) {
-    .avatar {
+    .profile__avatar {
         margin-bottom: 0px;
         align-items: center;
         display: flex;

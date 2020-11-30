@@ -1,28 +1,34 @@
 const editButtonNode = document.querySelector('.edit-button');
-const popupNode = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
-const leadSubtitleNode = document.querySelector('.user-data');
-const leadTitleNode = document.querySelector('.user-name');
+
+const popupNode = document.querySelector('.popup');
+const leadSubtitleNode = document.querySelector('.profile__info_user-data');
+const leadTitleNode = document.querySelector('.profile__info_user-name');
 const formNode = document.querySelector('.popup__form');
-const formInputNameNode = document.querySelector('.popup__input-name');
-const formInputJobNode = document.querySelector('.popup__input-job');
+const formInputNameNode = document.querySelector('.popup__input_name');
+const formInputJobNode = document.querySelector('.popup__input_job');
 const formButtonNode = document.querySelector('.popup__button');
 
-editButtonNode.addEventListener('click', togleleEditButtonClick);
-popupClose.addEventListener('click', togleleEditButtonClick);
-
-function togleleEditButtonClick() {
-    popupNode.classList.toggle('popup__visible');
+function openEditButtonClick() {
+    popupNode.classList.add('popup_visible');
     formInputNameNode.value = leadTitleNode.textContent;
     formInputJobNode.value = leadSubtitleNode.textContent;
 }
 
+function closeEditButtonClick() {
+    popupNode.classList.remove('popup_visible');
+    formInputNameNode.value = leadTitleNode.textContent;
+    formInputJobNode.value = leadSubtitleNode.textContent;
+}
 
-formNode.addEventListener('submit', handkeFormSubmit);
-
-function handkeFormSubmit(event) {
+function handleFormSubmit(event) {
     event.preventDefault();
     leadTitleNode.textContent = formInputNameNode.value;
     leadSubtitleNode.textContent = formInputJobNode.value;
+    popupNode.classList.remove('popup_visible');
+
 }
 
+editButtonNode.addEventListener('click', openEditButtonClick);
+popupClose.addEventListener('click', closeEditButtonClick);
+formNode.addEventListener('submit', handleFormSubmit);

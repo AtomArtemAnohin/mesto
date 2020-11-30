@@ -3,6 +3,9 @@
     max-width: 880px;
     margin-left: auto;
     margin-right: auto;
+    height: 74px;
+    border-bottom: 1px solid #545454;
+    
 }
 @media (max-width: 320px) {
     .header {
