@@ -15,15 +15,15 @@
 @import url(../blocks/profile/__user-data/profile__user-data.css);
 
 @import url(../blocks/button/button.css);
-@import url(../blocks/button/__edit-profile/button__edit-profile.css);
-@import url(../blocks/button/__add-element/button__add-element.css);
+@import url(../blocks/profile/__button-edit-profile/profile__button-edit-profile.css);
+@import url(../blocks/profile/__button-add-element/profile__button-add-element.css);
+@import url(../blocks/button/_like/button_like.css);
 
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/cards/__card/cards__card.css);
 @import url(../blocks/cards/__card-img/cards__card-img.css);
 @import url(../blocks/cards/__card-name/cards__card-name.css);
 @import url(../blocks/cards/__card-text/cards__card-text.css);
-@import url(../blocks/button/__like/button__like.css);
 
 @import url(../blocks/footer/footer.css);
 

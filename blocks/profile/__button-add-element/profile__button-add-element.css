@@ -1,4 +1,4 @@
-.button__add-element {
+.profile__button-add-element {
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 2px;
@@ -10,11 +10,11 @@
     background-repeat: no-repeat;
     background-color: black;
 }
-.button__add-element:hover {
+.profile__button-add-element:hover {
     opacity: 0.6;
 }
 @media (max-width: 320px) {
-    .button__add-element {
+    .profile__button-add-element {
         margin-top: 26px;
         margin-bottom: 0px;
         width: 282px;
