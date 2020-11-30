@@ -1,4 +1,4 @@
-.button-like {
+.button__like {
     margin-right: 21px;
     background-image: url(/images/Vector-like.png);
     background-position: center;
@@ -8,6 +8,6 @@
     border: none;
     background-color: white;
 }
-.button-like:hover {
+.button__like:hover {
     opacity: 0.5;
 }

@@ -1,4 +1,4 @@
-.element-name {
+.cards__card_name {
  background-color: white;
  display: flex;
  justify-content: space-between;
@@ -6,4 +6,5 @@
  width: 282px;
  height: 79px;
  border-radius: 0px 0px 10px 10px;
+ margin-top: 0px;
 }

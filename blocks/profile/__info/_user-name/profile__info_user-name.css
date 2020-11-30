@@ -6,7 +6,7 @@
     line-height: 48px;
     margin: 0px 0px 0px 0px;
 }
-@media (max-width: 320px) {
+@media (max-width: 360px) {
     .profile__info_user-name {
         font-size: 27px;
         line-height: 33px;

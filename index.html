@@ -9,62 +9,62 @@
 <body class="body">
     <div class="page">
         <header class="header">
-            <img class="header__logo" src="/images/Vector (1).svg" alt="Логотип">
+            <img class="header__logo" src="/images/Vector(1).svg" alt="Логотип">
         </header>
         <section class="profile">
             <div class="profile__avatar">
-                <img class="profile__avatar_user" src="/images/avatar.jpg" alt="аватарка">
+                <img class="profile__avatar_user" src="/images/avatar.svg" alt="аватарка">
             </div>
             <div class="profile__info">
                 <div class="profile__info_edit-user">
                     <h1 class="profile__info_user-name">Жак-Ив&nbsp;Кусто</h1>
-                    <button type="button" class="edit-button"></button>
+                    <button type="button" class="button button__edit-profile"></button>
                 </div>
                 <p class="profile__info_user-data">Исследователь океана</p>
             </div>
-            <button type="button" class="add-button"> </button>
+            <button type="button" class="button button__add-element"> </button>
         </section>
-        <section class="elements">
-            <div class="element">
-                    <img class="element-img" src="/images/pictures-1.png" alt="фото">
-                <div class="element-name">
-                    <h2 class="element-text">Карачаевск</h2>
-                    <button type="button" class="button-like"></button>
+        <section class="cards">
+            <div class="cards__card">
+                    <img class="cards__card_img" src="/images/pictures-1.png" alt="фото">
+                <div class="cards__card_name">
+                    <h2 class="cards__card_text">Карачаевск</h2>
+                    <button type="button" class="button button__like"></button>
                 </div>
             </div>
-            <div class="element">
-                <img class="element-img" src="/images/pictures-2.png" alt="фото">
-                <div class="element-name">
-                    <h2 class="element-text">Гора Эльбрус</h2>
-                    <button type="button" class="button-like"></button>
+            <div class="cards__card">
+                <img class="cards__card_img" src="/images/pictures-2.png" alt="фото">
+                <div class="cards__card_name">
+                    <h2 class="cards__card_text">Гора Эльбрус</h2>
+                    <button type="button" class="button button__like"></button>
                 </div>
             </div> 
-            <div class="element">
-                <img class="element-img" src="/images/pictures-3.png" alt="фото">
-                <div class="element-name">
-                    <h2 class="element-text">Домбай</h2>
-                    <button type="button" class="button-like"></button>
+            <div class="cards__card">
+                <img class="cards__card_img" src="/images/pictures-3.png" alt="фото">
+                <div class="cards__card_name">
+                    <h2 class="cards__card_text">Домбай</h2>
+                    <button type="button" class="button button__like"></button>
                 </div>
             </div>
-            <div class="element">
-                <img class="element-img" src="/images/pictures-4.png" alt="фото">
-                <div class="element-name">
-                    <h2 class="element-text">Гора Эльбрус</h2>
-                    <button type="button" class="button-like"></button>
+            <div class="cards__card">
+                <img class="cards__card_img" src="/images/pictures-4.png" alt="фото">
+                <div class="cards__card_name">
+                    <h2 class="cards__card_text">Гора Эльбрус</h2>
+                    <button type="button" class="button button__like"></button>
                 </div>
             </div>
-            <div class="element">
-                <img class="element-img" src="/images/pictures-5.png" alt="фото">
-                <div class="element-name">
-                    <h2 class="element-text">Домбай</h2>
-                    <button type="button" class="button-like"></button>
+            <div class="cards__card">
+                <img class="cards__card_img" src="/images/pictures-5.png" alt="фото">
+                <div class="cards__card_name">
+                    <h2 class="cards__card_text">Домбай</h2>
+                    <button type="button" class="button button__like"></button>
                 </div>
             </div>
-            <div class="element">
-                <img class="element-img" src="/images/pictures-6.png" alt="фото">
-                <div class="element-name">
-                    <h2 class="element-text">Карачаево-Ч...</h2>
-                    <button type="button" class="button-like"></button>
+            <div class="cards__card">
+                <img class="cards__card_img" src="/images/pictures-6.png" alt="фото">
+                <div class="cards__card_name">
+                    <h2 class="cards__card_text">Карачаево-Ч...</h2>
+                    <button type="button" class="button button__like"></button>
                 </div>
             </div>    
         </section>
@@ -75,12 +75,12 @@
     <div class="popup">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form" name="">
+            <form class="popup__form">
                 <input name="name" type="text" value="" class="popup__input popup__input_name">
                 <input name="job" type="text" value="" class="popup__input popup__input_job">
-                <button class="popup__button" type="submit">Сохранить</button>
+                <button class="button popup__button" type="submit">Сохранить</button>
             </form>
-            <button class="popup__close" type="button"></button>
+            <button class="button popup__close" type="button"></button>
         </div>
     </div>
     <script src="/index.js"></script>

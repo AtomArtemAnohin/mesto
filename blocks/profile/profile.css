@@ -1,5 +1,6 @@
 .profile {
-    margin: 40px 0px;
+    margin-top: 40px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -8,9 +9,17 @@
     max-width: 880px;
     flex-wrap: wrap;
 }
-@media (max-width: 320px) {
-    .profile{
+@media (max-width: 600px) {
+    .profile {
         margin-top: 42px;
         flex-direction: column;
-        align-items: center;    }
+        align-items: center;
     }
+}
+@media (max-width: 320px) {
+    .profile {
+        margin-top: 42px;
+        flex-direction: column;
+        align-items: center;    
+    }
+}
