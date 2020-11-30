@@ -1,4 +1,4 @@
-.profile__info_user-data {
+.profile__user-data {
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -7,7 +7,7 @@
     margin: 16px 0px 22px 0px;
 }
 @media (max-width: 320px) {
-    .profile__info_user-data {
+    .profile__user-data {
         font-size: 14px;
         line-height: 17px;
     }

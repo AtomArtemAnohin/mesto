@@ -1,4 +1,4 @@
-.profile__info_user-name {
+.profile__user-name {
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -7,7 +7,7 @@
     margin: 0px 0px 0px 0px;
 }
 @media (max-width: 360px) {
-    .profile__info_user-name {
+    .profile__user-name {
         font-size: 27px;
         line-height: 33px;
     }
