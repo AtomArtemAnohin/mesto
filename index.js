@@ -5,8 +5,8 @@ const popupNode = document.querySelector('.popup');
 const leadSubtitleNode = document.querySelector('.profile__user-data');
 const leadTitleNode = document.querySelector('.profile__user-name');
 const formNode = document.querySelector('.popup__form');
-const formInputNameNode = document.querySelector('.popup__input_name');
-const formInputJobNode = document.querySelector('.popup__input_job');
+const formInputNameNode = document.querySelector('.popup__input_type_name');
+const formInputJobNode = document.querySelector('.popup__input_type_job');
 const formButtonNode = document.querySelector('.popup__button');
 
 function openEditButtonClick() {
@@ -17,15 +17,13 @@ function openEditButtonClick() {
 
 function closeEditButtonClick() {
     popupNode.classList.remove('popup_visible');
-    formInputNameNode.value = leadTitleNode.textContent;
-    formInputJobNode.value = leadSubtitleNode.textContent;
 }
 
 function handleFormSubmit(event) {
     event.preventDefault();
     leadTitleNode.textContent = formInputNameNode.value;
     leadSubtitleNode.textContent = formInputJobNode.value;
-    popupNode.classList.remove('popup_visible');
+    closeEditButtonClick();
 
 }
 

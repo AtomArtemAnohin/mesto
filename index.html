@@ -13,7 +13,7 @@
         </header>
         <section class="profile">
             <div class="profile__avatar">
-                <img class="profile__user" src="/images/avatar.svg" alt="аватарка">
+                <img class="profile__user" src="/images/avatar.jpg" alt="аватарка">
             </div>
             <div class="profile__info">
                 <div class="profile__edit-user">
@@ -24,50 +24,50 @@
             </div>
             <button type="button" class="button profile__button-add-element"> </button>
         </section>
-        <section class="cards">
+        <main class="cards">
             <div class="cards__card">
                     <img class="cards__card-img" src="/images/pictures-1.png" alt="фото">
                 <div class="cards__card-name">
                     <h2 class="cards__card-text">Карачаевск</h2>
-                    <button type="button" class="button button_like"></button>
+                    <button type="button" class="button button_type_like"></button>
                 </div>
             </div>
             <div class="cards__card">
                 <img class="cards__card-img" src="/images/pictures-2.png" alt="фото">
                 <div class="cards__card-name">
                     <h2 class="cards__card-text">Гора Эльбрус</h2>
-                    <button type="button" class="button button_like"></button>
+                    <button type="button" class="button button_type_like"></button>
                 </div>
             </div> 
             <div class="cards__card">
                 <img class="cards__card-img" src="/images/pictures-3.png" alt="фото">
                 <div class="cards__card-name">
                     <h2 class="cards__card-text">Домбай</h2>
-                    <button type="button" class="button button_like"></button>
+                    <button type="button" class="button button_type_like"></button>
                 </div>
             </div>
             <div class="cards__card">
                 <img class="cards__card-img" src="/images/pictures-4.png" alt="фото">
                 <div class="cards__card-name">
                     <h2 class="cards__card-text">Гора Эльбрус</h2>
-                    <button type="button" class="button button_like"></button>
+                    <button type="button" class="button button_type_like"></button>
                 </div>
             </div>
             <div class="cards__card">
                 <img class="cards__card-img" src="/images/pictures-5.png" alt="фото">
                 <div class="cards__card-name">
                     <h2 class="cards__card-text">Домбай</h2>
-                    <button type="button" class="button button_like"></button>
+                    <button type="button" class="button button_type_like"></button>
                 </div>
             </div>
             <div class="cards__card">
                 <img class="cards__card-img" src="/images/pictures-6.png" alt="фото">
                 <div class="cards__card-name">
                     <h2 class="cards__card-text">Карачаево-Ч...</h2>
-                    <button type="button" class="button button_like"></button>
+                    <button type="button" class="button button_type_like"></button>
                 </div>
             </div>    
-        </section>
+        </main>
         <footer class="footer">
             <p>© 2020 Atom</p>
         </footer>
@@ -75,9 +75,9 @@
     <div class="popup">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form">
-                <input name="name" type="text" value="" class="popup__input popup__input_name">
-                <input name="job" type="text" value="" class="popup__input popup__input_job">
+            <form class="popup__form" name="form">
+                <input name="name" type="text" value="" class="popup__input popup__input_type_name">
+                <input name="job" type="text" value="" class="popup__input popup__input_type_job">
                 <button class="button popup__button" type="submit">Сохранить</button>
             </form>
             <button class="button popup__close" type="button"></button>
