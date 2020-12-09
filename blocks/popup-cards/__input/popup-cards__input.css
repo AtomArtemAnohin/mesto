@@ -1,0 +1,14 @@
+.popup-cards__input {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 13px;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+}
+.popup-cards__input:last-of-type{
+    margin-bottom: 48px;
+}
