@@ -1,0 +1,13 @@
+.button_active {
+    margin-right: 21px;
+    background-image: url(/images/like-active.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 22px;
+    width: 22px;
+    border: none;
+    background-color: white;
+}
+.button_active:hover {
+    opacity: 0.5;
+}
