@@ -40,19 +40,17 @@ const popupNodeCards = document.querySelector('.popup-cards');
 const popupCardsClose = document.querySelector('.popup-cards__close');
 
 const conteinerCards = document.querySelector('.cards');
-const templateElement = document.querySelector('.cards');
+
 const formNodeCards = document.querySelector('.popup-cards__form');
 const formButtonCardsNode = document.querySelector('.popup-cards__button');
 
 const inputCardName = document.querySelector('.popup-cards__input_type_title');
 const inputCardImage = document.querySelector('.popup-cards__input_type_image');
 
-
 function openEditButtonClick() {
     popupNode.classList.add('popup_visible');
     formInputNameNode.value = leadTitleNode.textContent;
     formInputJobNode.value = leadSubtitleNode.textContent;
-
 }
 
 function closeEditButtonClick() {
@@ -66,24 +64,21 @@ function handleFormSubmit(event) {
     closeEditButtonClick();
 }
 
-function openEditButtonClic() {
+function openCardsButtonClick() {
     popupNodeCards.classList.add('popup-cards_visible');
     
 }
-function closeEditButtonClic() {
+function closeCardsButtonClick() {
     popupNodeCards.classList.remove('popup-cards_visible');
 }
 
-function handleFormSubmi(event) {
+function handleCardsSubmit(event) {
     event.preventDefault();
     const newCardTitle = inputCardName.value;
     const newCardImage = inputCardImage.value;
     const newCardItem = composeItem({ name: newCardTitle, link: newCardImage});
-    templateElement.prepend(newCardItem);
-   
-    closeEditButtonClic();
- 
-    
+    conteinerCards.prepend(newCardItem);
+    closeCardsButtonClick();
 }
 
 function renderList() {
@@ -93,18 +88,24 @@ function renderList() {
 }
 
 function composeItem(item) {
-    const newItem = templateElement.content.cloneNode(true)
+    /* Создаем карточку */
+    const newItem = conteinerCards.content.cloneNode(true)
     const cardsElement = newItem.querySelector('.cards__card-text');
     cardsElement.textContent = item.name;
     const urlelement = newItem.querySelector('.cards__card-img');
     urlelement.src = item.link;
     const altElement = newItem.querySelector(".cards__card-img");
     altElement.alt = 'Фото места'; 
-    
+    /* Лайк */
     let buttonLike = newItem.querySelector('.button_like');
     buttonLike.addEventListener('click', function(e) {
         onLikeButton(e.currentTarget);
     });
+    /* Удоляем карточку */
+    newItem.querySelector('.button_trash').addEventListener('click', function(e) {
+        e.target.closest('.cards__card').remove();
+    });
+
     return newItem;
 }
 
@@ -112,11 +113,14 @@ function onLikeButton(like){
     like.classList.toggle("button_active");
 }
 
+
+
 editButtonNode.addEventListener('click', openEditButtonClick);
 popupClose.addEventListener('click', closeEditButtonClick);
 formNode.addEventListener('submit', handleFormSubmit);
 
-editButtonCardsNode.addEventListener('click', openEditButtonClic);
-popupCardsClose.addEventListener('click', closeEditButtonClic);
-formNodeCards.addEventListener('submit', handleFormSubmi);
+editButtonCardsNode.addEventListener('click', openCardsButtonClick);
+popupCardsClose.addEventListener('click', closeCardsButtonClick);
+formNodeCards.addEventListener('submit', handleCardsSubmit);
 renderList();
+
