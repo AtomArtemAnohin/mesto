@@ -47,6 +47,11 @@ const formButtonCardsNode = document.querySelector('.popup-cards__button');
 const inputCardName = document.querySelector('.popup-cards__input_type_title');
 const inputCardImage = document.querySelector('.popup-cards__input_type_image');
 
+const popapModalNode = document.querySelector('.popup-modal');
+const modalImage = document.querySelector('.popup-modall__image');
+const modalName = document.querySelector('.popup-modal__name');
+const modalPopupClose = document.querySelector('.popup-modal__close');
+
 function openEditButtonClick() {
     popupNode.classList.add('popup_visible');
     formInputNameNode.value = leadTitleNode.textContent;
@@ -72,6 +77,7 @@ function closeCardsButtonClick() {
     popupNodeCards.classList.remove('popup-cards_visible');
 }
 
+
 function handleCardsSubmit(event) {
     event.preventDefault();
     const newCardTitle = inputCardName.value;
@@ -79,6 +85,10 @@ function handleCardsSubmit(event) {
     const newCardItem = composeItem({ name: newCardTitle, link: newCardImage});
     conteinerCards.prepend(newCardItem);
     closeCardsButtonClick();
+}
+
+function onLikeButton(like){
+    like.classList.toggle("button_active");
 }
 
 function renderList() {
@@ -105,14 +115,23 @@ function composeItem(item) {
     newItem.querySelector('.button_trash').addEventListener('click', function(e) {
         e.target.closest('.cards__card').remove();
     });
-
+    /* Просмотр картинок поближе */
+    urlelement.addEventListener('click' , function() {
+        modalImage.src = urlelement.src;
+        modalName.textContent = cardsElement.textContent;
+        openModalPopup();
+        
+    });
     return newItem;
 }
 
-function onLikeButton(like){
-    like.classList.toggle("button_active");
+function openModalPopup() {
+    popapModalNode.classList.add('popup-modal_visible');
+    
 }
-
+function closeModalPopup() {
+    popapModalNode.classList.remove('popup-modal_visible');
+}
 
 
 editButtonNode.addEventListener('click', openEditButtonClick);
@@ -122,5 +141,7 @@ formNode.addEventListener('submit', handleFormSubmit);
 editButtonCardsNode.addEventListener('click', openCardsButtonClick);
 popupCardsClose.addEventListener('click', closeCardsButtonClick);
 formNodeCards.addEventListener('submit', handleCardsSubmit);
+
+modalPopupClose.addEventListener('click', closeModalPopup);
 renderList();
 

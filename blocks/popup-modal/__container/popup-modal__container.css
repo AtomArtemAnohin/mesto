@@ -1,0 +1,15 @@
+.popup-modal__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+   
+}
+@media (max-width: 320px) {
+    .popup-modal__container {
+        margin-top: 136px;
+    }
+    }
