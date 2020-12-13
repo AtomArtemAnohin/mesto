@@ -48,7 +48,7 @@ const inputCardName = document.querySelector('.popup-cards__input_type_title');
 const inputCardImage = document.querySelector('.popup-cards__input_type_image');
 
 const popapModalNode = document.querySelector('.popup-modal');
-const modalImage = document.querySelector('.popup-modall__image');
+const modalImage = document.querySelector('.popup-modal__image');
 const modalName = document.querySelector('.popup-modal__name');
 const modalPopupClose = document.querySelector('.popup-modal__close');
 
