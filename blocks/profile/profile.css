@@ -8,6 +8,7 @@
     justify-content: space-between;
     max-width: 880px;
     flex-wrap: wrap;
+    
 }
 @media (max-width: 600px) {
     .profile {

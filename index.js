@@ -119,6 +119,8 @@ function composeItem(item) {
     urlelement.addEventListener('click' , function() {
         modalImage.src = urlelement.src;
         modalName.textContent = cardsElement.textContent;
+        modalImage.alt = 'Картинка'
+
         openModalPopup();
         
     });

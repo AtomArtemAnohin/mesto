@@ -1,5 +1,6 @@
 .button {
     cursor: pointer;
-    transition: 390ms;
+    transition: visibility 0s, opacity 0.5s linear;
     background-color: transparent;
+    
 }
