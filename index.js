@@ -26,7 +26,7 @@ const initialCards = [
 ];
 const editButtonNode = document.querySelector('.profile__button-edit-profile');
 const editButtonCardsNode = document.querySelector('.profile__button-add-element');
-const popupClose = document.querySelector('.popup__close');
+const popupEditClose = document.querySelector('.popup__close');
 
 const popupNode = document.querySelector('.popup');
 const formNode = document.querySelector('.popup__form');
@@ -58,7 +58,7 @@ function handleFormSubmit(event) {
     event.preventDefault();
     leadTitleNode.textContent = formInputNameNode.value;
     leadSubtitleNode.textContent = formInputJobNode.value;
-    closeEditButtonClick();
+    closePopup(popupNode);
 }
 
 function handleCardsSubmit(event) {
@@ -67,7 +67,9 @@ function handleCardsSubmit(event) {
     const newCardImage = inputCardImage.value;
     const newCardItem = composeItem({ name: newCardTitle, link: newCardImage});
     conteinerCards.prepend(newCardItem);
-    closeCardsButtonClick();
+    
+    closePopup(popupNodeCards);
+    
 }
 
 function onLikeButton(like){
@@ -104,47 +106,44 @@ function composeItem(item) {
         modalName.textContent = cardsElement.textContent;
         modalImage.alt = 'Картинка'
 
-        openModalPopup();
+        openPopup(popapModalNode);
         
     });
     return newItem;
 }
 
-function openEditButtonClick() {
-    popupNode.classList.add('popup_visible');
+
+function openPopup(windowPopup){
+    windowPopup.classList.add('popup_visible');
+}
+editButtonNode.addEventListener('click', function() {
     formInputNameNode.value = leadTitleNode.textContent;
     formInputJobNode.value = leadSubtitleNode.textContent;
-}
+    openPopup(popupNode);
+});
+editButtonCardsNode.addEventListener('click', function() {
+    openPopup(popupNodeCards);
+});
 
 
-function closeEditButtonClick() {
-    popupNode.classList.remove('popup_visible');
+function closePopup(windowPopup){
+    windowPopup.classList.remove('popup_visible');
 }
 
-function openCardsButtonClick() {
-    popupNodeCards.classList.add('popup_visible');
-    
-}
-function closeCardsButtonClick() {
-    popupNodeCards.classList.remove('popup_visible');
-}
-
-function openModalPopup() {
-    popapModalNode.classList.add('popup_visible');
-    
-}
-function closeModalPopup() {
-    popapModalNode.classList.remove('popup_visible');
-}
-
-editButtonNode.addEventListener('click', openEditButtonClick);
-popupClose.addEventListener('click', closeEditButtonClick);
+popupEditClose.addEventListener('click', function() {
+    popupNode.classList.remove('popup_visible'); 
+});
 formNode.addEventListener('submit', handleFormSubmit);
 
-editButtonCardsNode.addEventListener('click', openCardsButtonClick);
-popupCardsClose.addEventListener('click', closeCardsButtonClick);
+popupCardsClose.addEventListener('click', function() {
+    popupNodeCards.classList.remove('popup_visible'); 
+});
 formNodeCards.addEventListener('submit', handleCardsSubmit);
 
-modalPopupClose.addEventListener('click', closeModalPopup);
+modalPopupClose.addEventListener('click', function() {
+    popapModalNode.classList.remove('popup_visible')
+
+});
+
 renderList();
 
