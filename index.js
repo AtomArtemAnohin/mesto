@@ -40,7 +40,7 @@ const formButtonNode = document.querySelector('.popup__button');
 
 
 const popupNodeCards = document.querySelector('.popup_cards');
-const popupCardsClose = document.querySelector('.popup__close_cards');
+const popupCardsClose = document.querySelector('.popup_close_cards');
 
 const conteinerCards = document.querySelector('.cards');
 const formNodeCards = document.querySelector('.popup__form_card');
