@@ -25,33 +25,32 @@ const initialCards = [
     }
 ];
 const editButtonNode = document.querySelector('.profile__button-edit-profile');
+const editButtonCardsNode = document.querySelector('.profile__button-add-element');
 const popupClose = document.querySelector('.popup__close');
 
 const popupNode = document.querySelector('.popup');
+const formNode = document.querySelector('.popup__form');
+
 const leadSubtitleNode = document.querySelector('.profile__user-data');
 const leadTitleNode = document.querySelector('.profile__user-name');
-const formNode = document.querySelector('.popup__form');
 const formInputNameNode = document.querySelector('.popup__input_type_name');
 const formInputJobNode = document.querySelector('.popup__input_type_job');
 const formButtonNode = document.querySelector('.popup__button');
 
-const editButtonCardsNode = document.querySelector('.profile__button-add-element');
+
+
 const popupNodeCards = document.querySelector('.popup_cards');
 const popupCardsClose = document.querySelector('.popup__close_cards');
 
 const conteinerCards = document.querySelector('.cards');
-
 const formNodeCards = document.querySelector('.popup__form_card');
-const formButtonCardsNode = document.querySelector('.popup-cards__button');
-
-const inputCardName = document.querySelector('.popup__input_type_title');
-const inputCardImage = document.querySelector('.popup__input_type_image');
 
 const popapModalNode = document.querySelector('.popup_modal');
-const modalImage = document.querySelector('.popup-modal__image');
-const modalName = document.querySelector('.popup-modal__name');
+const modalImage = document.querySelector('.popup__image_modal');
+const modalName = document.querySelector('.popup__name_modal');
 const modalPopupClose = document.querySelector('.popup__close_modal');
-
+const inputCardName = document.querySelector('.popup__input_type_title');
+const inputCardImage = document.querySelector('.popup__input_type_image');
 
 
 
@@ -117,6 +116,7 @@ function openEditButtonClick() {
     formInputJobNode.value = leadSubtitleNode.textContent;
 }
 
+
 function closeEditButtonClick() {
     popupNode.classList.remove('popup_visible');
 }
@@ -130,11 +130,11 @@ function closeCardsButtonClick() {
 }
 
 function openModalPopup() {
-    popapModalNode.classList.add('popup_modal_visible');
+    popapModalNode.classList.add('popup_visible');
     
 }
 function closeModalPopup() {
-    popapModalNode.classList.remove('popup_modal_visible');
+    popapModalNode.classList.remove('popup_visible');
 }
 
 editButtonNode.addEventListener('click', openEditButtonClick);
