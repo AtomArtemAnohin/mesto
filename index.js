@@ -40,7 +40,7 @@ const formButtonNode = document.querySelector('.popup__button');
 
 
 const popupNodeCards = document.querySelector('.popup_cards');
-const popupCardsClose = document.querySelector('.popup_close_cards');
+const popupCardsClose = document.querySelector('.popup__close_cards');
 
 const conteinerCards = document.querySelector('.cards');
 const formNodeCards = document.querySelector('.popup__form_card');
@@ -48,7 +48,7 @@ const formNodeCards = document.querySelector('.popup__form_card');
 const popapModalNode = document.querySelector('.popup_modal');
 const modalImage = document.querySelector('.popup__image_modal');
 const modalName = document.querySelector('.popup__name_modal');
-const modalPopupClose = document.querySelector('.popup__close_modal');
+const modalPopupClose = document.querySelector('.popup__close-modal');
 const inputCardName = document.querySelector('.popup__input_type_title');
 const inputCardImage = document.querySelector('.popup__input_type_image');
 

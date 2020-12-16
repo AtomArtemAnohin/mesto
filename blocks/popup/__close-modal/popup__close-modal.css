@@ -1,4 +1,4 @@
-.popup_close_cards {
+.popup__close-modal {
     background-image: url(/images/Close\ Icon.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -6,19 +6,19 @@
     border: none;
     width: 40px;
     height: 40px;
-    align-self: flex-end;
+    top: -45px;
+    right: -45px;
     position: absolute;
-    margin-right: -77px;
-    margin-top: -70px;
+
 }
-.popup_close_cards:hover {
+.popup__close-modal:hover {
     opacity: 0.6;
 }
 @media (max-width: 320px) {
-    .popup_close_cards {
-        width: 26px;
-        height: 26px;
-        margin-right: -30px;
-        margin-top: -80px;
+    .popup__close-modal {
+        width: 30px;
+        height: 30px;
+
+   
     }
     }

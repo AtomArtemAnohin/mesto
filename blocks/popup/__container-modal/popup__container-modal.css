@@ -1,4 +1,4 @@
-.popup__container_modal {
+.popup__container-modal {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
    
 }
 @media (max-width: 320px) {
-    .popup__container_modal {
+    .popup__container-modal {
         margin-top: 136px;
     }
     }
