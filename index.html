@@ -44,9 +44,14 @@
     <div class="popup">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form" name="form">
-                <input placeholder="Ваше имя" name="Name" type="text" value="" class="popup__input popup__input_type_name">
-                <input placeholder="Ваша деятельность" name="Imange" type="text" value="" class="popup__input popup__input_type_job">
+            <form class="popup__form" name="form" novalidate>
+                <input placeholder="Ваше имя" id="name-user" name="Name" type="text" value="" class="popup__input popup__input_type_name" minlength="2"maxlength="40" required>
+                <span id="name-user-error" class="error"></span>
+            
+            
+                <input placeholder="Ваша деятельность" id="job-user" name="Imange" type="text" value="" class="popup__input popup__input_type_job" minlength="2"maxlength="200" required>
+                <span id="job-user-error" class="error"></span>
+
                 <button class="button popup__button" type="submit">Сохранить</button>
             </form>
             <button class="button popup__close" type="button"></button>
@@ -55,9 +60,15 @@
     <div class="popup popup_cards">
         <div class="popup__container">
             <h2 class="popup__title">Новое место</h2>
-            <form class="popup__form popup__form_card" name="form">
-                <input  placeholder="Название" name="name" type="text" value="" class="popup__input popup__input_type_title">
-                <input placeholder="Ссылка на картинку" type="url"  name="job" value="" class="popup__input popup__input_type_image">
+            <form class="popup__form popup__form_card" name="form" novalidate>
+                
+                <input id="name-title" placeholder="Название" name="name" type="text" value="" class="popup__input popup__input_type_title" minlength="2"maxlength="30" required autocomplete="off">
+                <span id="name-title-error" class="error"></span>
+        
+            
+                <input id="url-image" placeholder="Ссылка на картинку" type="url"  name="" value="" class="popup__input popup__input_type_image" required autocomplete="off">
+                <span id="url-image-error" class="error"></span>
+            
                 <button class="button popup__button" type="submit">Создать</button>
             </form>
             <button class="button popup__close popup__close_cards" type="button"></button>
