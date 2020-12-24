@@ -115,6 +115,8 @@ function composeItem(item) {
 
 function openPopup(windowPopup){
     windowPopup.classList.add('popup_visible');
+    
+         
 }
 editButtonNode.addEventListener('click', function() {
     formInputNameNode.value = leadTitleNode.textContent;
@@ -206,3 +208,24 @@ function enableValidation(){
     });
 }
 enableValidation();
+
+
+function popupCloseEsc() {
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            closePopup(popupNode)
+            closePopup(popupNodeCards)
+            closePopup(popapModalNode)
+        }  
+    })
+}
+popupCloseEsc()
+
+function closePopupOverlay() {
+ document.addEventListener('click', function (e) {
+     
+         closePopup(e.target)
+     
+ })
+}
+closePopupOverlay()
