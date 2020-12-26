@@ -29,7 +29,7 @@ const editButtonCardsNode = document.querySelector('.profile__button-add-element
 const popupEditClose = document.querySelector('.popup__close');
 
 const popupNode = document.querySelector('.popup');
-const formNode = document.querySelector('.popup__form');
+
 
 const leadSubtitleNode = document.querySelector('.profile__user-data');
 const leadTitleNode = document.querySelector('.profile__user-name');
@@ -60,15 +60,19 @@ function handleFormSubmit(event) {
     leadSubtitleNode.textContent = formInputJobNode.value;
     closePopup(popupNode);
 }
-
+const formNode = document.querySelector('.popup__form');
 function handleCardsSubmit(event) {
     event.preventDefault();
     const newCardTitle = inputCardName.value;
     const newCardImage = inputCardImage.value;
     const newCardItem = composeItem({ name: newCardTitle, link: newCardImage});
     conteinerCards.prepend(newCardItem);
+    formNodeCards.reset();
     
     closePopup(popupNodeCards);
+    
+    
+    
     
 }
 
@@ -114,10 +118,16 @@ function composeItem(item) {
 
 
 function openPopup(windowPopup){
+    
     windowPopup.classList.add('popup_visible');
     
-         
+    
+    document.addEventListener('keydown', popupCloseEsc)
+    document.addEventListener('click', closePopupOverlay)
+      
 }
+
+
 editButtonNode.addEventListener('click', function() {
     formInputNameNode.value = leadTitleNode.textContent;
     formInputJobNode.value = leadSubtitleNode.textContent;
@@ -130,6 +140,8 @@ editButtonCardsNode.addEventListener('click', function() {
 
 function closePopup(windowPopup){
     windowPopup.classList.remove('popup_visible');
+    document.removeEventListener('keydown',popupCloseEsc )
+    document.removeEventListener('click',closePopupOverlay )
 }
 
 popupEditClose.addEventListener('click', function() {
@@ -150,14 +162,12 @@ modalPopupClose.addEventListener('click', function() {
 renderList();
 
 
-
-
 function popupCloseEsc() {
+    
     document.addEventListener('keydown', function (e) {
+        const popupActive = document.querySelector('.popup_visible');
         if (e.key === 'Escape') {
-            closePopup(popupNode)
-            closePopup(popupNodeCards)
-            closePopup(popapModalNode)
+            closePopup(popupActive)
         }  
     })
 }

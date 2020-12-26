@@ -1,6 +1,5 @@
-const formAdd = document.querySelector(".popup__form_card");
-
-
+const formAdd = document.querySelector(".popup_card");
+const buttonInvis = document.querySelector('.button_invalid');
 
 
 function showError(form, input) {
@@ -26,7 +25,7 @@ function setButtonState(button, isActive){
         button.disabled = false;
     } else {
         button.classList.add("button_invalid");
-        button.disabled = "disabled";
+        button.disabled = "true";
     }
 }
 
@@ -49,11 +48,17 @@ function enableValidation(){
 
         form.addEventListener('submit', (evt)=> {
             evt.preventDefault();
-            console.log("форма отправлена")
         });
 
         const submitButton = form.querySelector('.popup__button');
         setButtonState(submitButton, form.checkValidity())
     });
 }
-enableValidation();
+enableValidation({
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__button',
+    inactiveButtonClass: 'popup__button_disabled',
+    inputErrorClass: 'popup__input_type_error',
+    errorClass: 'popup__error_visible'
+  }); 
