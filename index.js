@@ -29,7 +29,7 @@ const editButtonCardsNode = document.querySelector('.profile__button-add-element
 const popupEditClose = document.querySelector('.popup__close');
 
 const popupNode = document.querySelector('.popup');
-
+const formNode = document.querySelector('.popup__form');
 
 const leadSubtitleNode = document.querySelector('.profile__user-data');
 const leadTitleNode = document.querySelector('.profile__user-name');
@@ -60,20 +60,22 @@ function handleFormSubmit(event) {
     leadSubtitleNode.textContent = formInputJobNode.value;
     closePopup(popupNode);
 }
-const formNode = document.querySelector('.popup__form');
+
 function handleCardsSubmit(event) {
     event.preventDefault();
     const newCardTitle = inputCardName.value;
     const newCardImage = inputCardImage.value;
     const newCardItem = composeItem({ name: newCardTitle, link: newCardImage});
+
+    const buttonSubmit = formNodeCards.querySelector('.popup__button')
+
     conteinerCards.prepend(newCardItem);
-    formNodeCards.reset();
+    formNodeCards.reset(); 
     
+    setButtonState(buttonSubmit, false, ValidationConfig)
+
     closePopup(popupNodeCards);
-    
-    
-    
-    
+        
 }
 
 function onLikeButton(like){
@@ -109,7 +111,7 @@ function composeItem(item) {
         modalImage.src = urlelement.src;
         modalName.textContent = cardsElement.textContent;
         modalImage.alt = 'Картинка'
-
+        
         openPopup(popapModalNode);
         
     });
@@ -118,10 +120,7 @@ function composeItem(item) {
 
 
 function openPopup(windowPopup){
-    
     windowPopup.classList.add('popup_visible');
-    
-    
     document.addEventListener('keydown', popupCloseEsc)
     document.addEventListener('click', closePopupOverlay)
       
@@ -133,8 +132,11 @@ editButtonNode.addEventListener('click', function() {
     formInputJobNode.value = leadSubtitleNode.textContent;
     openPopup(popupNode);
 });
+
 editButtonCardsNode.addEventListener('click', function() {
+    
     openPopup(popupNodeCards);
+    
 });
 
 
