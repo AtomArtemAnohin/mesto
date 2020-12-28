@@ -98,7 +98,7 @@ function composeItem(item) {
     const altElement = newItem.querySelector(".cards__card-img");
     altElement.alt = 'Фото места'; 
     /* Лайк */
-    let buttonLike = newItem.querySelector('.button_like');
+    const buttonLike = newItem.querySelector('.button_like');
     buttonLike.addEventListener('click', function(e) {
         onLikeButton(e.currentTarget);
     });
