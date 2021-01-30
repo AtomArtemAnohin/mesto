@@ -32,7 +32,7 @@ const editFormValidation = new FormValidator(validationConfig, editForm, true);
 const addFormValidation = new FormValidator(validationConfig, addForm, true);
 
 // открытие popup и добавление слушателей
-export const popupOpen = (popup) => {
+export const openPopup = (popup) => {
     popup.classList.add('popup_visible');
     document.addEventListener('keydown', (evt) => {
       closeEsc(evt, popup);
@@ -43,29 +43,29 @@ export const popupOpen = (popup) => {
   };
 
 // редактирование popupEdit
-const popupEditSave = (evt) => {
+const editSavePopup = (evt) => {
     evt.preventDefault();
     leadTitleNode.textContent = inputName.value;
     leadSubtitleNode.textContent = inputFeature.value;
-    popupClose(popupEdit);
+    closePopup(popupEdit);
   };
 
 // закрытие по Esc
 const closeEsc = (evt, popup) => {
     if (evt.key === 'Escape') {
-      popupClose(popup);
+      closePopup(popup);
     }
   };
 
 //закрытие по backgorund
 const closeBackground = (evt, popup) => {
     if (evt.target.classList.contains('popup') || evt.target.classList.contains('button')) {
-      popupClose(popup);
+      closePopup(popup);
     }
   };
 
 // закрытие popup
-const popupClose = (popup) => {
+const closePopup = (popup) => {
     popup.classList.remove('popup_visible');
     document.removeEventListener('keydown', (evt) => {
       closeEsc(evt, popup);
@@ -90,25 +90,25 @@ const addCard = (container, cardElement) => {
 const addNewCard = (evt) => {
     evt.preventDefault();
     addCard(cardList, createCard(newCardName.value, newCardLink.value));
-    popupClose(popupAdd);
+    сlosePopup(popupAdd);
     evt.target.reset();
   };
 
 // открытие popupAdd 
 addButton.addEventListener('click', () => {
-    popupOpen(popupAdd);
+  openPopup(popupAdd);
     addFormValidation.enableValidation();
   });
   
 // открытие popupEdit
 editButton.addEventListener('click', () => {
-    leadTitleNode.value = inputName.textContent;
-    leadSubtitleNode.value = inputFeature.textContent;
-    popupOpen(popupEdit);
+  inputName.value = leadTitleNode.textContent;
+    inputFeature.value = leadSubtitleNode.textContent;
+    openPopup(popupEdit);
     editFormValidation.enableValidation();
   });
   
-popupEdit.addEventListener('submit', popupEditSave);
+popupEdit.addEventListener('submit', editSavePopup);
   
 popupAdd.addEventListener('submit', addNewCard);
   

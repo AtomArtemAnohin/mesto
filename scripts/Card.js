@@ -1,4 +1,4 @@
-import { popupImage, popupOpen } from './index.js';
+import { popupImage, openPopup } from './index.js';
 
 export class Card {
   constructor(name, link, cardSelector) {
@@ -27,7 +27,7 @@ export class Card {
     popupImageFig.src = this._link;
     popupImageFig.alt = this._name;
     popupImageCaption.textContent = this._name;
-    popupOpen(popupImage);
+    openPopup(popupImage);
   }
 
   _setEventListeners() {
