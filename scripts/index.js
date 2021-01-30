@@ -12,8 +12,8 @@ const inputFeature = popupEdit.querySelector('.popup__input_type_image');
 export const popupImage = document.querySelector('.popup_modal');
 const popupAdd = document.querySelector('.popup_cards');
 const addForm = popupAdd.querySelector('.popup__form');
-const newCardName = popupAdd.querySelector('.popup__input_type_title');
-const newCardLink = popupAdd.querySelector('.popup__input_type_image');
+const newCardName = popupAdd.querySelector('.popup__input_type_place-name');
+const newCardLink = popupAdd.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__button-add-element');
 const cardList = document.querySelector('.cards-list');
 
@@ -90,7 +90,6 @@ const addCard = (container, cardElement) => {
 const addNewCard = (evt) => {
     evt.preventDefault();
     addCard(cardList, createCard(newCardName.value, newCardLink.value));
-    сlosePopup(popupAdd);
     evt.target.reset();
   };
 
