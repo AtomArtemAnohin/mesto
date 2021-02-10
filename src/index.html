@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Место</title>
-    <script type="module" src="./scripts/index.js" defer></script>
 </head>
 <body class="body">
+
     <div class="page">
         <header class="header">
             <img src="<%=require('./images/Vector(1).svg')%>" alt="Логотип" class="header__logo">
@@ -14,7 +14,7 @@
         <main>
         <section class="profile">
             <div class="profile__avatar">
-                <img class="profile__user" src="/images/avatar.jpg" alt="аватарка">
+                <img class="profile__user" src="<%=require('./images/avatar.jpg')%>" alt="аватарка">
             </div>
             <div class="profile__info">
                 <div class="profile__edit-user">
@@ -45,12 +45,12 @@
     <div class="popup popup_type_edit">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form" name="form" novalidate>
-                <input placeholder="Ваше имя" id="name-user" name="Name" type="text" value="" class="popup__input popup__input_type_title" minlength="2" maxlength="40" required>
+            <form class="popup__form" name="edit" novalidate>
+                <input placeholder="Ваше имя" id="name-user" name="name" type="text" value="" class="popup__input popup__input_type_title" minlength="2" maxlength="40" required>
                 <span id="name-user-error" class="error"></span>
             
             
-                <input placeholder="Ваша деятельность" id="job-user" name="Image" type="text" value="" class="popup__input popup__input_type_image" minlength="2" maxlength="200" required>
+                <input placeholder="Ваша деятельность" id="job-user" name="feature" type="text" value="" class="popup__input popup__input_type_image" minlength="2" maxlength="200" required>
                 <span id="job-user-error" class="error"></span>
 
                 <button class="button popup__button" type="submit">Сохранить</button>
@@ -79,7 +79,7 @@
         <div class="popup__container-modal">
             <img class ="popup__image popup__image_modal" src="#" alt="Изображение">
             <p class="popup__name popup__name_modal"></p>
-            <button class="button popup__close-modal" aria-label="Закрыть" type="button"></button>
+            <button class="button popup__close popup__close-modal" aria-label="Закрыть" type="button"></button>
         </div>
         
     </div>
