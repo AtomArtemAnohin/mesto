@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Место</title>
 </head>
+
 <body class="body">
 
     <div class="page">
@@ -12,32 +14,38 @@
             <img src="<%=require('./images/Vector(1).svg')%>" alt="Логотип" class="header__logo">
         </header>
         <main>
-        <section class="profile">
-            <div class="profile__avatar">
-                <img class="profile__user" src="<%=require('./images/avatar.jpg')%>" alt="аватарка">
-            </div>
-            <div class="profile__info">
-                <div class="profile__edit-user">
-                    <h1 class="profile__user-name">Жак-Ив Кусто</h1>
-                    <button type="button" class="button profile__button-edit-profile"></button>
+            <section class="profile">
+                <div class="profile__avatar">
+                    <div class="profile__avatar-container">
+                        <img src="#" alt="Аватар" class="profile__user">
+                        <button class="button_edit-avatar"></button>
+                    </div>
                 </div>
-                <p class="profile__user-data">Исследователь океана</p>
-            </div>
-            <button type="button " class="button profile__button-add-element"></button>
-        </section>
-        <section class="cards-list">
-        </section>
-    </main>
-    <template class="cards"> 
-        <div class="cards__card">
+                <div class="profile__info">
+                    <div class="profile__edit-user">
+                        <h1 class="profile__user-name"></h1>
+                        <button type="button" class="button profile__button-edit-profile"></button>
+                    </div>
+                    <p class="profile__user-data"></p>
+                </div>
+                <button type="button " class="button profile__button-add-element"></button>
+            </section>
+            <section class="cards-list">
+            </section>
+        </main>
+        <template class="cards">
+            <div class="cards__card">
                 <img class="cards__card-img" src="#" alt="Изображение">
                 <button type="button" class="button button_trash"></button>
-            <div class="cards__card-name">
-                <h2 class="cards__card-text"></h2>
-                <button type="button" class="button button_like"></button>
+                <div class="cards__card-name">
+                    <h2 class="cards__card-text"></h2>
+                    <div class="card__likes">
+                        <button class="button button_like" aria-label="Лайк" type="button"></button>
+                        <span class="card__like-counter">0</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </template>
+        </template>
         <footer class="footer">
             <p>© 2020 Atom</p>
         </footer>
@@ -46,11 +54,12 @@
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="edit" novalidate>
-                <input placeholder="Ваше имя" id="name-user" name="name" type="text" value="" class="popup__input popup__input_type_title" minlength="2" maxlength="40" required>
+                <input placeholder="Ваше имя" id="name-user" name="name" type="text" value=""
+                    class="popup__input popup__input_type_title" minlength="2" maxlength="40" required>
                 <span id="name-user-error" class="error"></span>
-            
-            
-                <input placeholder="Ваша деятельность" id="job-user" name="feature" type="text" value="" class="popup__input popup__input_type_image" minlength="2" maxlength="200" required>
+
+                <input placeholder="Ваша деятельность" id="job-user" name="feature" type="text" value=""
+                    class="popup__input popup__input_type_image" minlength="2" maxlength="200" required>
                 <span id="job-user-error" class="error"></span>
 
                 <button class="button popup__button" type="submit">Сохранить</button>
@@ -58,32 +67,59 @@
             <button class="button popup__close" aria-label="Закрыть" type="button"></button>
         </div>
     </div>
+    <div class="popup popup_type_submit">
+        <div class="popup__container">
+            <button class="button popup__close" aria-label="Закрыть"></button>
+            <h3 class="popup__title">Вы уверены?</h3>
+            <form action="#" class="popup__form" name="confirm-delete" novalidate>
+                <button class="button popup__button" type="submit">Да</button>
+            </form>
+        </div>
+    </div>
     <div class="popup popup_cards">
         <div class="popup__container">
             <h2 class="popup__title">Новое место</h2>
             <form class="popup__form popup__form_card" name="form" novalidate>
-                
-                <input id="name-title" placeholder="Название" name="name" type="text" value="" class="popup__input popup__input_type_place-name" minlength="2" maxlength="30" required autocomplete="off">
+
+                <input id="name-title" placeholder="Название" name="name" type="text" value="" class="popup__input"
+                    minlength="2" maxlength="30" required autocomplete="off">
                 <span id="name-title-error" class="error"></span>
-        
-            
-                <input id="url-image" placeholder="Ссылка на картинку" type="url"  name="link" value="" class="popup__input popup__input_type_link" required autocomplete="off">
+
+
+                <input id="url-image" placeholder="Ссылка на картинку" type="url" name="link" value=""
+                    class="popup__input" required autocomplete="off">
                 <span id="url-image-error" class="error"></span>
-            
+
                 <button class="button popup__button" type="submit">Создать</button>
             </form>
             <button class="button popup__close popup__close_cards" aria-label="Закрыть" type="button"></button>
         </div>
     </div>
+    </div>
+    <div class="popup popup_edit-avatar">
+        <div class="popup__container">
+            <button class="button popup__close popup__close_cards" aria-label="Закрыть"></button>
+            <h3 class="popup__title">Обновить аватар</h3>
+            <form name="edit-avatar" action="#" class="popup__form" novalidate>
+
+                <input id="edit-avatar" name="avatar" required class="popup__input" placeholder="Введите ссылку на фото"
+                    type="url">
+                <span class="error" id="edit-avatar-error"></span>
+
+                <button class="button popup__button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
     <div class="popup popup_modal">
         <div class="popup__container-modal">
-            <img class ="popup__image popup__image_modal" src="#" alt="Изображение">
+            <img class="popup__image popup__image_modal" src="#" alt="Изображение">
             <p class="popup__name popup__name_modal"></p>
             <button class="button popup__close popup__close-modal" aria-label="Закрыть" type="button"></button>
         </div>
-        
+
     </div>
-    
-    
+
+
 </body>
+
 </html>
