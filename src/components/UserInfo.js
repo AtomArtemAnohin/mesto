@@ -3,6 +3,7 @@ export default class UserInfo {
     this._userName = document.querySelector(nameSelector);
     this._userFeature = document.querySelector(featureSelector);
     this._userAvatar = document.querySelector(avatarSelector);
+
   }
 
   getUserInfo() {
@@ -13,6 +14,7 @@ export default class UserInfo {
 
   setUserInfo({ data }) {
     this._userName.textContent = data.name;
+
     this._userFeature.textContent = data.about;
   }
   setUserAvatar(data) {
