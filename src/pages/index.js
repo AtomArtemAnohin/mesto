@@ -87,7 +87,7 @@ api.getInitialCards()
   });
 
 function createCard(item) {
-  const card = Card(item, myId, '.cards', {
+  const card = new Card(item, myId, '.cards', {
     handleCardClick: (item) => {
       imagePopup.open(item);
     },
