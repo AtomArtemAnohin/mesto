@@ -21,7 +21,7 @@ export default class Api {
          headers: this._headers,
       })
          .then(res => {
-            this._checkRepsonse(res);
+            return this._checkRepsonse(res);
          });
    }
 
@@ -58,7 +58,7 @@ export default class Api {
          }),
       })
          .then(res => {
-            this._checkRepsonse(res)
+            return this._checkRepsonse(res)
          });
    }
 
@@ -98,7 +98,7 @@ export default class Api {
          method: 'PATCH',
          body: JSON.stringify({
             avatar: item.avatar
-         }),
+         })
       }
       )
    }

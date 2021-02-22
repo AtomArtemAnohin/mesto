@@ -49,6 +49,7 @@ const popupEditAvatar = new PopupWithForm('.popup_edit-avatar', {
   handleFormSubmit: (data) => {
     popupEditAvatar.checkDownload(false);
     api.setAvatar(data)
+
       .then(() => {
         userData.setUserAvatar(data);
       })
@@ -74,9 +75,10 @@ const api = new Api({
 let myId = '';
 let tempCard = '';
 
-api.getInitialCards()
+api.getInitialData()
   .then((res) => {
     const [user, cards] = res;
+
     myId = user._id;
     userData.setUserInfo(user);
     userData.setUserAvatar(user);
@@ -96,9 +98,10 @@ function createCard(item) {
       tempCard = card;
     },
     setLike: (item) => {
+
       api.setLike(item)
         .then((item) => {
-          card.setLikes(item);
+          card.setLikes(item)
         })
         .catch((err) => {
           console.log(err);
@@ -154,6 +157,7 @@ const popupEditProfile = new PopupWithForm('.popup_type_edit', {
     popupEditProfile.checkDownload(false);
     api.setUserInfo(item)
       .then((res) => {
+
         userData.setUserInfo(res);
       })
       .catch((error) => {

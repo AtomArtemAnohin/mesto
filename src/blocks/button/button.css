@@ -2,5 +2,6 @@
     cursor: pointer;
     transition: visibility 0s, opacity 0.5s linear;
     background-color: transparent;
+    border: none;
     
 }
